@@ -1,4 +1,7 @@
 
+
+/* =====================================slide===================================== */
+
 .slide{
     width:100%;
     margin:0 auto;
@@ -22,66 +25,68 @@
 
 .slide .slick-slide{
     /* 개별 배너 */
-    margin:0; 
     width:100%;
+    height: 90vh;
+    margin:0; 
     float:left;
+    background-color: #000;
 }
 .slide .slick-slide img{
     width:100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
 }
 
-.slide .slick-slide img::before{
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4);
-}
 /* next prev */        
 
 .slide .slick-arrow{
+    width: 35px; height: 35px;
     background: none;
     border: none;
     outline: none;
     vertical-align: middle;
 }
 .slide .slick-arrow i {
-    font-size: 25px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.7);
 }
 .slide .slick-prev{
     position: absolute;
-    left:10%; bottom:5%;
+    left:0; bottom:3%;
+    margin-left: 20px;
     z-index: 2;
 }
 .slide .slick-next{
     position: absolute;
-    left: 20%; bottom:5%;
+    left: 18%; bottom:3%;
     z-index: 2;
 }
 
 /* dots */
 .slide .slick-dots{
     width:100%;
-    vertical-align: middle;
+    vertical-align: top;
     position: absolute;
-    left: 30%; bottom:5%;
+    left: 35%; bottom:4%;
     list-style-type: none;
     padding:0;
 }
 .slide .slick-dots li{
     display: inline-block;
     margin: 0 10px;
+    background: none;
 }
+/* button은 기본으로 padding값이 있어 0으로 만들어준 후에 사이즈 작업진행 */
 .slide .slick-dots li button{
-    width: 3px; height: 5px;
+    width: 6px; height: 6px;
+    padding: 0; 
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     display: inline-block;
     border:none;
     font-size:0;
+    outline: none;
 }
-
-
 
 .slide .slick-dots li.slick-active button{
     background-color: #fff;
