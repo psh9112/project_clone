@@ -248,6 +248,16 @@ nav {
     visibility: hidden;
     z-index: 500;
 
+    //네비게이션 열림
+    .open {
+        visibility: visible;
+    }
+
+    //네비게이션 닫힘
+    .close{
+        visibility: visible;
+    }
+
     .navi {
         width: 100vw;
         overflow: hidden;
@@ -280,7 +290,7 @@ nav {
 
             .split-text {
                 display: block;
-                transform: translateY(150%);
+                transform: translateY(200%);
             }
 
             .menu {
@@ -339,7 +349,7 @@ nav {
 
             .split-text {
                 display: block;
-                transform: translateY(150%);
+                transform: translateY(200%);
             }
 
             li {
@@ -503,20 +513,10 @@ footer {
 
 
 
-//네비게이션 열림
-.open {
-    visibility: visible;
-}
-
 //네비게이션 배경 열림
 .open .navi-bg {
     animation: navi-open .5s ease-in forwards;
 }
-
-.open .navi-bg svg path {
-    animation: bg-open .5s ease-in forwards;
-}
-
 @keyframes navi-open {
     0% {
         transform: translateY(100%);
@@ -527,33 +527,36 @@ footer {
     }
 }
 
+
+.open .navi-bg svg path {
+    animation: bg-open .5s ease-in forwards;
+}
 @keyframes bg-open {
     0% {
         d: path('M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z');
     }
 
     10% {
-        d: path('M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z');
-    }
-
-    70% {
         d: path('M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z');
     }
 
+    45% {
+        d: path('M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z');
+    }
+
     100% {
-        // transform: translateY(0%);
         d: path('M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z');
     }
 }
 
-//네비게이션 txx 열림
+//네비게이션 열린 후 텍스트 내려옴
 nav.open .split-text {
-    animation: nav-split-down .8s .1s forwards;
+    animation: nav-split-down 1s .5s forwards;
 }
 
 @keyframes nav-split-down {
     0% {
-        transform: translateY(150%);
+        transform: translateY(200%);
     }
 
     100% {
@@ -570,35 +573,30 @@ nav.open .split-text {
 // =======================================================================================
 
 
-
-
-
 //네비게이션 닫힘
 .close {
-    animation: navi-close .5s ease-in forwards;
+    animation: navi-close 1s ease-in forwards;
 }
 
 @keyframes navi-close {
     0% {
-        opacity: 1;
-        transform: translateY(0vh);
+        transform: translateY(0%);
     }
 
     100% {
-        opacity: 0;
-        transform: translateY(-100vh);
+        transform: translateY(200%);
     }
 }
 
 
-//네비게이션 닫힘-txt
+//네비게이션 닫기 전 txt 올라감
 nav.close .split-text {
     animation: nav-split-down .5s forwards;
 }
 
 @keyframes nav-split-down {
     0% {
-        transform: translateY(-150%);
+        transform: translateY(200%);
     }
 
     100% {
@@ -609,7 +607,7 @@ nav.close .split-text {
 
 
 //네비게이션 배경 닫힘
-.close-bg {
+.close .navi-bg svg path {
     animation: bg-close .8s .3s ease-in forwards;
 }
 
@@ -618,7 +616,11 @@ nav.close .split-text {
         d: path('M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z');
     }
 
-    50% {
+    40%{
+        d: path('M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z')
+    }
+
+    80% {
         d: path('M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z');
     }
 

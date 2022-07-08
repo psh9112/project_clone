@@ -11,7 +11,6 @@ function navi() {
     const elHead = document.querySelector('header');
     const elBurger = document.querySelector('.head .header-burger');
     const elNavi = document.querySelector('nav');
-    const elSvg = document.querySelector('nav .navi-bg');
 
     elBurger.addEventListener('click', function () {
 
