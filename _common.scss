@@ -565,11 +565,6 @@ nav.open .split-text {
 }
 
 
-
-
-
-
-
 // =======================================================================================
 
 
@@ -595,13 +590,13 @@ nav.close .split-text {
 }
 
 @keyframes nav-split-down {
+    100% {
+        transform: translateY(0%);
+    }
     0% {
         transform: translateY(200%);
     }
 
-    100% {
-        transform: translateY(0%);
-    }
 }
 
 

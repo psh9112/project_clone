@@ -101,7 +101,6 @@ main {
 
                 .string-up {
                     display: inline-block;
-                    margin-right: 7px;
                     transform: translateY(300%);
                     position: relative;
                     overflow: hidden;
@@ -109,42 +108,41 @@ main {
                     >span {
                         font-size: 16px;
                         line-height: 1.7;
-                        color:#262626;
+                        color: #262626;
                     }
                 }
             }
         }
 
-        .view {
-            margin: auto;
-            display: inline-block;
-            border: 1px solid #111;
-            margin: 0 20px;
-            padding: 12px 28px;
-            position: relative;
+        .view_box {
             overflow: hidden;
-
+            display: inline-block;
+            padding: 0 20px;
+            
             .change {
                 display: block;
-                color: #111;
-                text-align: center;
-                font-weight: bold;
-                text-align: center;
-                font-size: 14px;
-
-                &::before {
-                    content: 'VIEW OUR STORY';
+                position: relative;
+                
+                .view {
+                    display: block;
+                    padding: 12px 28px;
                     width: 100%;
+                    border: 1px solid #111;
+                    color: #111;
+                    text-align: center;
                     font-weight: bold;
+                    text-align: center;
                     font-size: 14px;
-                    color: #1fc77c;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    display: none;
+                }
+                &:hover {
+                    
+                    .view{
+                        border-color: #1fc77c;
+                        color: #1fc77c;
+                    }
                 }
             }
+
         }
     }
 
@@ -254,11 +252,14 @@ main {
                         width: 100%;
                     }
 
-                    &:hover{
-                        a{
-                            img{transform: scale(1.1);}
+                    &:hover {
+                        a {
+                            img {
+                                transform: scale(1.1);
+                            }
                         }
                     }
+
                     a {
                         display: block;
                         width: 100%;
@@ -500,15 +501,13 @@ main {
         }
     }
 
-
-
     //careers-contact
     //ㄴㄴMORE 클릭하면 기존글자는 위로 숨겨지고 아래에서 숨겨져있던 글자는위로 올라옴
     .careers-contact {
         width: 100%;
         padding: 32px 0 0;
 
-        ul {
+        >ul {
             width: 100%;
             display: flex;
             justify-content: space-between;
