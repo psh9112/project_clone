@@ -37,22 +37,22 @@ a {
 }
 
 .h2 {
-    font-size: 30px;
+    font-size: 35px;
     line-height: 1.2;
 }
 
 .h3 {
-    font-size: 28px;
+    font-size: 30px;
     line-height: 1.2;
 }
 
 .h4 {
-    font-size: 22px;
+    font-size: 28px;
     line-height: 1.35;
 }
 
 .h5 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.35;
 }
 
@@ -72,7 +72,7 @@ header {
     .head {
         width: 95%;
         margin: 0 auto;
-
+        
         .header {
             width: 100%;
             padding: 20px 20px 0;
@@ -80,17 +80,18 @@ header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-
+            
+            
             h1 {
                 width: 40%;
-                height: 30px;
+                height: 40px;
                 position: relative;
 
                 .logo {
                     transition: .5s;
 
                     img {
+
                         position: absolute;
                         left: 0;
                         top: 0;
@@ -98,11 +99,13 @@ header {
 
                     .logo_1 {
                         width: 80%;
+                        height: 100%;
                         display: block;
                     }
 
                     .logo_2 {
                         width: 80%;
+                        height: 100%;
                         display: none;
                     }
 
@@ -112,7 +115,7 @@ header {
 
             .header-burger {
                 width: 35px;
-                height: 18px;
+                height: 20px;
                 text-align: right;
                 position: relative;
                 transition: .5s;
@@ -254,7 +257,7 @@ nav {
     }
 
     //네비게이션 닫힘
-    .close{
+    .close {
         visibility: visible;
     }
 
@@ -289,6 +292,7 @@ nav {
             z-index: 490;
 
             .split-text {
+                visibility: hidden;
                 display: block;
                 transform: translateY(200%);
             }
@@ -352,7 +356,7 @@ nav {
                 transform: translateY(200%);
             }
 
-            li {
+            >li {
                 padding: 0 20px;
                 margin-bottom: 16px;
                 position: relative;
@@ -361,13 +365,13 @@ nav {
                 p {
                     margin-bottom: 11.2px;
                     font-weight: 500;
-                    font-size: 12px;
+                    font-size: 14px;
                 }
 
                 span {
                     margin-bottom: 11.2px;
                     display: block;
-                    font-size: 14px;
+                    font-size: 16px;
                 }
 
                 a {
@@ -517,6 +521,7 @@ footer {
 .open .navi-bg {
     animation: navi-open .5s ease-in forwards;
 }
+
 @keyframes navi-open {
     0% {
         transform: translateY(100%);
@@ -531,6 +536,7 @@ footer {
 .open .navi-bg svg path {
     animation: bg-open .5s ease-in forwards;
 }
+
 @keyframes bg-open {
     0% {
         d: path('M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z');
@@ -540,7 +546,7 @@ footer {
         d: path('M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z');
     }
 
-    45% {
+    20% {
         d: path('M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z');
     }
 
@@ -563,11 +569,6 @@ nav.open .split-text {
         transform: translateY(0%);
     }
 }
-
-
-
-
-
 
 
 // =======================================================================================
@@ -595,13 +596,14 @@ nav.close .split-text {
 }
 
 @keyframes nav-split-down {
+    100% {
+        transform: translateY(0%);
+    }
+
     0% {
         transform: translateY(200%);
     }
 
-    100% {
-        transform: translateY(0%);
-    }
 }
 
 
@@ -616,7 +618,7 @@ nav.close .split-text {
         d: path('M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z');
     }
 
-    40%{
+    40% {
         d: path('M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z')
     }
 

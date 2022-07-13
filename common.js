@@ -17,14 +17,14 @@ function navi() {
         elHead.classList.toggle('active-nav');
         elNavi.classList.add('open');
 
-
-        if (!elHead.classList.contains('active-nav')) {
-            elNavi.classList.remove('open');
-            elNavi.classList.add('close');
-        } else {
-            elNavi.classList.remove('close');
-        }
-
+        setTimeout(function(){
+            if (!elHead.classList.contains('active-nav')) {
+                elNavi.classList.remove('open');
+                elNavi.classList.add('close');
+            }else{
+                elNavi.classList.remove('close');
+            }
+        },100);
 
     }); //click end
 }//navi end

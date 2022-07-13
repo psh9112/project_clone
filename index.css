@@ -31,22 +31,22 @@ a {
 }
 
 .h2 {
-  font-size: 30px;
+  font-size: 35px;
   line-height: 1.2;
 }
 
 .h3 {
-  font-size: 28px;
+  font-size: 30px;
   line-height: 1.2;
 }
 
 .h4 {
-  font-size: 22px;
+  font-size: 28px;
   line-height: 1.35;
 }
 
 .h5 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.35;
 }
 
@@ -74,7 +74,7 @@ header .head .header {
 }
 header .head .header h1 {
   width: 40%;
-  height: 30px;
+  height: 40px;
   position: relative;
 }
 header .head .header h1 .logo {
@@ -87,15 +87,17 @@ header .head .header h1 .logo img {
 }
 header .head .header h1 .logo .logo_1 {
   width: 80%;
+  height: 100%;
   display: block;
 }
 header .head .header h1 .logo .logo_2 {
   width: 80%;
+  height: 100%;
   display: none;
 }
 header .head .header .header-burger {
   width: 35px;
-  height: 18px;
+  height: 20px;
   text-align: right;
   position: relative;
   transition: 0.5s;
@@ -176,6 +178,12 @@ nav {
   visibility: hidden;
   z-index: 500;
 }
+nav .open {
+  visibility: visible;
+}
+nav .close {
+  visibility: visible;
+}
 nav .navi {
   width: 100vw;
   overflow: hidden;
@@ -204,8 +212,9 @@ nav .navi .navi-contain {
   z-index: 490;
 }
 nav .navi .navi-contain .split-text {
+  visibility: hidden;
   display: block;
-  transform: translateY(150%);
+  transform: translateY(200%);
 }
 nav .navi .navi-contain .menu {
   padding: 0 20px;
@@ -252,25 +261,25 @@ nav .navi .contacts {
 }
 nav .navi .contacts .split-text {
   display: block;
-  transform: translateY(150%);
+  transform: translateY(200%);
 }
-nav .navi .contacts li {
+nav .navi .contacts > li {
   padding: 0 20px;
   margin-bottom: 16px;
   position: relative;
   overflow: hidden;
 }
-nav .navi .contacts li p {
+nav .navi .contacts > li p {
   margin-bottom: 11.2px;
   font-weight: 500;
-  font-size: 12px;
-}
-nav .navi .contacts li span {
-  margin-bottom: 11.2px;
-  display: block;
   font-size: 14px;
 }
-nav .navi .contacts li a {
+nav .navi .contacts > li span {
+  margin-bottom: 11.2px;
+  display: block;
+  font-size: 16px;
+}
+nav .navi .contacts > li a {
   margin-bottom: 11.2px;
   display: block;
   color: #888888;
@@ -377,18 +386,9 @@ footer .info-2 .reserve small {
   font-size: 12px;
 }
 
-.open {
-  visibility: visible;
-}
-
 .open .navi-bg {
   -webkit-animation: navi-open 0.5s ease-in forwards;
           animation: navi-open 0.5s ease-in forwards;
-}
-
-.open .navi-bg svg path {
-  -webkit-animation: bg-open 0.5s ease-in forwards;
-          animation: bg-open 0.5s ease-in forwards;
 }
 
 @-webkit-keyframes navi-open {
@@ -408,42 +408,48 @@ footer .info-2 .reserve small {
     transform: translateY(0%);
   }
 }
+.open .navi-bg svg path {
+  -webkit-animation: bg-open 0.5s ease-in forwards;
+          animation: bg-open 0.5s ease-in forwards;
+}
+
 @-webkit-keyframes bg-open {
   0% {
     d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z");
   }
   10% {
-    d: path("M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z");
-  }
-  70% {
     d: path("M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z");
+  }
+  20% {
+    d: path("M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z");
   }
   100% {
     d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z");
   }
 }
+
 @keyframes bg-open {
   0% {
     d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z");
   }
   10% {
-    d: path("M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z");
-  }
-  70% {
     d: path("M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z");
+  }
+  20% {
+    d: path("M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z");
   }
   100% {
     d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z");
   }
 }
 nav.open .split-text {
-  -webkit-animation: nav-split-down 0.8s 0.1s forwards;
-          animation: nav-split-down 0.8s 0.1s forwards;
+  -webkit-animation: nav-split-down 1s 0.5s forwards;
+          animation: nav-split-down 1s 0.5s forwards;
 }
 
 @-webkit-keyframes nav-split-down {
   0% {
-    transform: translateY(150%);
+    transform: translateY(200%);
   }
   100% {
     transform: translateY(0%);
@@ -452,36 +458,32 @@ nav.open .split-text {
 
 @keyframes nav-split-down {
   0% {
-    transform: translateY(150%);
+    transform: translateY(200%);
   }
   100% {
     transform: translateY(0%);
   }
 }
 .close {
-  -webkit-animation: navi-close 0.5s ease-in forwards;
-          animation: navi-close 0.5s ease-in forwards;
+  -webkit-animation: navi-close 1s ease-in forwards;
+          animation: navi-close 1s ease-in forwards;
 }
 
 @-webkit-keyframes navi-close {
   0% {
-    opacity: 1;
-    transform: translateY(0vh);
+    transform: translateY(0%);
   }
   100% {
-    opacity: 0;
-    transform: translateY(-100vh);
+    transform: translateY(200%);
   }
 }
 
 @keyframes navi-close {
   0% {
-    opacity: 1;
-    transform: translateY(0vh);
+    transform: translateY(0%);
   }
   100% {
-    opacity: 0;
-    transform: translateY(-100vh);
+    transform: translateY(200%);
   }
 }
 nav.close .split-text {
@@ -490,14 +492,14 @@ nav.close .split-text {
 }
 
 @keyframes nav-split-down {
-  0% {
-    transform: translateY(-150%);
-  }
   100% {
     transform: translateY(0%);
   }
+  0% {
+    transform: translateY(200%);
+  }
 }
-.close-bg {
+.close .navi-bg svg path {
   -webkit-animation: bg-close 0.8s 0.3s ease-in forwards;
           animation: bg-close 0.8s 0.3s ease-in forwards;
 }
@@ -506,7 +508,10 @@ nav.close .split-text {
   0% {
     d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z");
   }
-  50% {
+  40% {
+    d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z");
+  }
+  80% {
     d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z");
   }
   100% {
@@ -518,7 +523,10 @@ nav.close .split-text {
   0% {
     d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z");
   }
-  50% {
+  40% {
+    d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z");
+  }
+  80% {
     d: path("M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z");
   }
   100% {
@@ -708,7 +716,7 @@ main .visual .slide li .title {
   overflow: hidden;
   position: absolute;
   left: 0;
-  bottom: 70px;
+  bottom: 10%;
   margin-right: 1rem;
   margin-left: 20px;
   z-index: 2;
@@ -718,13 +726,13 @@ main .visual .slide li .title .h3 {
   color: #eeece6;
   font-weight: 800;
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 35px;
 }
 main .visual .slide li .title p {
   width: 90%;
   color: rgba(255, 255, 255, 0.6);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 25px;
 }
 main .company {
   width: 95%;
@@ -764,44 +772,39 @@ main .company article .translation {
 }
 main .company article .translation .string-up {
   display: inline-block;
-  margin-right: 7px;
   transform: translateY(300%);
   position: relative;
   overflow: hidden;
 }
 main .company article .translation .string-up > span {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: #262626;
 }
-main .company .view {
-  margin: auto;
-  display: inline-block;
-  border: 1px solid #111;
-  margin: 0 20px;
-  padding: 12px 28px;
-  position: relative;
+main .company .view_box {
   overflow: hidden;
+  display: inline-block;
+  padding: 0 20px;
 }
-main .company .view .change {
+main .company .view_box .change {
   display: block;
+  position: relative;
+  margin-top: 36px;
+}
+main .company .view_box .change .view {
+  display: block;
+  padding: 12px 28px;
+  width: 100%;
+  border: 1px solid #111;
   color: #111;
   text-align: center;
   font-weight: bold;
   text-align: center;
   font-size: 14px;
 }
-main .company .view .change::before {
-  content: "VIEW OUR STORY";
-  width: 100%;
-  font-weight: bold;
-  font-size: 14px;
+main .company .view_box .change:hover .view {
+  border-color: #1fc77c;
   color: #1fc77c;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
 }
 main .services {
   width: 95%;
@@ -942,7 +945,7 @@ main .expert-team article .h2 {
 }
 main .expert-team .team {
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 20px;
   margin: 0 auto;
 }
 main .expert-team .team ul {
@@ -972,8 +975,12 @@ main .expert-team .team ul li p {
   font-size: 12px;
   color: #ccc;
 }
-main .portfolio .portfolio-list {
+main .portfolio {
   width: 95%;
+  margin: 0 auto;
+}
+main .portfolio .portfolio-list {
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
   padding: 85px 0 20px;
@@ -1001,13 +1008,12 @@ main .portfolio .portfolio-list .title-6 .h2 {
 main .portfolio .portfolio-list .list {
   width: 100%;
   display: flex;
+  justify-content: left;
   flex-wrap: wrap;
-  justify-content: space-between;
-  overflow: hidden;
 }
 main .portfolio .portfolio-list .list .scale-up {
   width: 50%;
-  padding: 20px 8px 20px 20px;
+  padding: 0 8px 20px 20px;
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -1016,15 +1022,17 @@ main .portfolio .portfolio-list .list .scale-up a {
   display: block;
 }
 main .portfolio .portfolio-list .list .scale-up a img {
-  width: 160px;
-  height: 210px;
+  width: 100%;
+  height: 280px;
 }
 main .portfolio .portfolio-list .list .scale-up .h5 {
+  width: 100%;
   padding: 16px 0 0;
   color: #262626;
   font-weight: 800;
 }
 main .portfolio .portfolio-list .list .scale-up small {
+  width: 100%;
   padding-top: 3px;
   color: #111;
   font-size: 12px;
@@ -1090,7 +1098,7 @@ main .careers-contact {
   width: 100%;
   padding: 32px 0 0;
 }
-main .careers-contact ul {
+main .careers-contact > ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1098,50 +1106,51 @@ main .careers-contact ul {
   flex-direction: column;
   overflow: hidden;
 }
-main .careers-contact ul .string-up {
+main .careers-contact > ul .string-up {
   transform: translateY(120%);
 }
-main .careers-contact ul li {
+main .careers-contact > ul li {
   width: 100%;
   height: 25vh;
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
 }
-main .careers-contact ul li img {
+main .careers-contact > ul li img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .careers-contact ul li a {
+main .careers-contact > ul li a {
   position: absolute;
-  left: 20px;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
+  margin-left: 20px;
 }
-main .careers-contact ul li a .h5 {
+main .careers-contact > ul li a .h5 {
   color: rgba(224, 224, 224, 0.6);
   font-weight: bold;
 }
-main .careers-contact ul li a .h3 {
+main .careers-contact > ul li a .h3 {
   color: #eeece6;
   font-weight: 800;
   margin: 5px 0 25px;
 }
-main .careers-contact ul li a .action {
+main .careers-contact > ul li a .action {
   position: relative;
 }
-main .careers-contact ul li a .action .action_more .more-1 {
+main .careers-contact > ul li a .action .action_more .more-1 {
   display: inline-block;
   padding-right: 10px;
   color: #fff;
   font-weight: 600;
 }
-main .careers-contact ul li a .action .action_more i {
+main .careers-contact > ul li a .action .action_more i {
   color: #fff;
 }
-main .careers-contact ul li a .action .action_line {
+main .careers-contact > ul li a .action .action_line {
   opacity: 0;
   /* .ani-3 div::after{
       content: '';
@@ -1156,18 +1165,18 @@ main .careers-contact ul li a .action .action_line {
       100%{width: 100%;}
   } */
 }
-main .careers-contact ul li a .action .action_line .line {
+main .careers-contact > ul li a .action .action_line .line {
   display: inline-block;
   width: 70px;
   height: 5px;
   border-top: 2px solid #fff;
   margin-right: 30px;
 }
-main .careers-contact ul li a .action .action_line .view {
+main .careers-contact > ul li a .action .action_line .view {
   color: #fff;
   font-weight: 600;
 }
-main .careers-contact ul li a .action .action_line.active {
+main .careers-contact > ul li a .action .action_line.active {
   -webkit-animation: line_action 0.5s 0.5s forwards;
           animation: line_action 0.5s 0.5s forwards;
 }

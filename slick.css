@@ -26,7 +26,7 @@
 .slide .slick-slide{
     /* 개별 배너 */
     width:100%;
-    height: 90vh;
+    height: 100vh;
     margin:0; 
     float:left;
     background-color: #000;
@@ -40,14 +40,14 @@
 /* next prev */        
 
 .slide .slick-arrow{
-    width: 35px; height: 35px;
+    width: 30px; height: 30px;
     background: none;
     border: none;
     outline: none;
     vertical-align: middle;
 }
 .slide .slick-arrow i {
-    font-size: 20px;
+    font-size: 25px;
     color: rgba(255, 255, 255, 0.7);
 }
 .slide .slick-prev{
@@ -58,7 +58,8 @@
 }
 .slide .slick-next{
     position: absolute;
-    left: 18%; bottom:3%;
+    left: 0%; bottom:3%;
+    margin-left: 80px;
     z-index: 2;
 }
 
@@ -67,18 +68,18 @@
     width:100%;
     vertical-align: top;
     position: absolute;
-    left: 35%; bottom:4%;
+    left: 35%; bottom: 3.5%;
     list-style-type: none;
     padding:0;
 }
 .slide .slick-dots li{
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px;
     background: none;
 }
 /* button은 기본으로 padding값이 있어 0으로 만들어준 후에 사이즈 작업진행 */
 .slide .slick-dots li button{
-    width: 6px; height: 6px;
+    width: 8px; height: 8px;
     padding: 0; 
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
