@@ -15,9 +15,11 @@ function navi() {
     elBurger.addEventListener('click', function () {
 
         elHead.classList.toggle('active-nav');
-        elNavi.classList.add('open');
-
+        elNavi.classList.toggle('open');
+        
         setTimeout(function(){
+            elNavi.classList.toggle('close')
+            
             if (!elHead.classList.contains('active-nav')) {
                 elNavi.classList.remove('open');
                 elNavi.classList.add('close');
