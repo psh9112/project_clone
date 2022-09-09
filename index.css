@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h4,
@@ -168,7 +172,6 @@ a {
   nav {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     overflow-y: auto;
     position: fixed;
     left: 0;
@@ -185,6 +188,7 @@ a {
   nav .navi {
     width: 100vw;
     overflow: hidden;
+    overflow-y: auto;
   }
   nav .navi .navi-bg {
     width: 100%;
@@ -206,6 +210,7 @@ a {
     width: 100%;
     margin: 80px 0 40px;
     z-index: 490;
+    overflow-y: auto;
   }
   nav .navi .navi-contain .split-text {
     display: block;
@@ -253,7 +258,7 @@ a {
   }
   nav .navi .contacts .split-text {
     display: block;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
   nav .navi .contacts > li {
     padding: 0 20px;
