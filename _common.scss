@@ -245,6 +245,7 @@ a {
     nav {
         width: 100vw;
         height: 100vh;
+        overflow-x: hidden;
         overflow-y: auto;
         position: fixed;
         left: 0;
@@ -264,8 +265,7 @@ a {
 
         .navi {
             width: 100vw;
-            overflow: hidden;
-            overflow-y: auto;
+
 
             .navi-bg {
                 width: 100%;
@@ -290,7 +290,6 @@ a {
                 width: 100%;
                 margin: 80px 0 40px;
                 z-index: 490;
-                overflow-y: auto;
 
                 .split-text {
                     display: block;
@@ -346,7 +345,6 @@ a {
             .contacts {
                 width: 100%;
                 margin-bottom: 40px;
-                overflow: hidden;
 
                 .split-text {
                     display: block;
@@ -357,7 +355,6 @@ a {
                     padding: 0 20px;
                     margin-bottom: 16px;
                     position: relative;
-                    overflow: hidden;
 
                     p {
                         margin-bottom: 11.2px;
